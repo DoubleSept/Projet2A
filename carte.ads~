@@ -1,0 +1,21 @@
+with Epreuve;
+use Epreuve;
+
+package Carte is
+   --Type Carte
+   type Carte is private;
+   
+   --Fonctions
+   function Recuperer_Carte(S_Carte : Carte) return Tab_Character;
+   procedure MaJ_Epreuves(S_Carte : Carte); --Vérifie les épreuves valider
+   
+private
+   
+   --Définitions du type carte
+   type Carte is record
+      Tableau : Tab_Character;
+      Epreuves : Liste_Epr;
+      Pos_Joueur : Position;
+   end record;  
+   
+end Carte;

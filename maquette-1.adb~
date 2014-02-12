@@ -1,0 +1,34 @@
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use Ada.Text_IO, Ada.Integer_Text_IO;
+
+procedure maquette is
+   Continuer : Boolean := True;
+   Vie_Max : Integer := 100;
+   Vie_Actuelle : Integer := Vie_Max;
+begin
+   while(Continuer) loop
+     --On fait le dessin--
+     Put_line("//////////////////////////////////////////////////////////////////////");
+     Put_line("//               |||                                                //");
+     Put_line("//              |. .|                                               //");
+     Put_line("//               \>/                                           \|/  //");
+     Put_line("//               _|_                                           -O-  //");
+     Put_line("//        ***   /   \                                          /|\  //");
+     Put_line("//        *\\  //| |\\                                              //");
+     Put_line("//        * \\// | |//                                              //");
+     Put_line("//           \\  /_\/              \\\\\\                           //");
+     Put_line("//              // \\             <(°    \                          //");
+     Put_line("//             //   \\             (      )  {°)_                   //");
+     Put_line("//            //     \\             (    )    \>_\                  //");
+     Put_line("//////////////////////////////////////////////////////////////////////");
+     Put("               PV : ");
+     Put(Vie_Actuelle);
+     Put("/");
+     Put(Vie_Max);
+     New_Line;
+     Put_line(" [F]ight | [E]scape | [L]oose | [P]rout ||[Sq] Save and Quit ");
+     
+     
+   end loop;
+   
+end maquette;

@@ -1,0 +1,12 @@
+package Types is
+   LARGEUR_ECRAN : Integer := 66;
+   HAUTEUR_ECRAN : Integer := 11;
+   EPAISSEUR_BORDURE : Integer := 2;
+   HAUTEUR_BORDURE : Integer := 1;
+   type Tab_Ecran is array(1..LARGEUR_ECRAN, 1..HAUTEUR_ECRAN) of Character;
+   
+   type Position is record
+      X : Natural;
+      Y : Natural;
+   end record;
+end Types;

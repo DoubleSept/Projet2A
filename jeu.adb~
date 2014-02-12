@@ -1,0 +1,98 @@
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use Ada.Text_IO, Ada.Integer_Text_IO;
+
+procedure jeu is
+   
+   LARGEUR_ECRAN : Integer := 66;
+   HAUTEUR_ECRAN : Integer := 11;
+   EPAISSEUR_BORDURE : Integer := 2;
+   HAUTEUR_BORDURE : Integer := 1;
+   type Tab_Ecran is array(1..LARGEUR_ECRAN, 1..HAUTEUR_ECRAN) of Character;
+   
+   --Procedure retracant l'écran
+   procedure Mise_A_Jour(Ecran : Tab_Ecran; Lignes_A_Sauter : Integer) is
+   begin
+      --Placement du curseur
+      Set_Line(1);
+      Set_Line(1);
+      
+      ----------------
+      ----Mise a jour de la partie supérieure
+      --a)Bordure
+      for Y in 1..(HAUTEUR_BORDURE) loop
+	 for X in  1..(LARGEUR_ECRAN+2*EPAISSEUR_BORDURE) loop
+	    Put('/');
+	 end loop;
+	 New_Line;
+      end loop;
+      
+      --b)Le corps de l'image
+      for Y in 1..(HAUTEUR_ECRAN) loop
+	 --Bord gauche
+	 for X in  1..(EPAISSEUR_BORDURE) loop
+	    Put('/');
+	 end loop;
+	 --Corps
+	 for X in  1..(LARGEUR_ECRAN) loop
+	    Put(Ecran(X, Y));
+	 end loop;
+	 --Bord droit
+	 for X in  1..(EPAISSEUR_BORDURE) loop
+	    Put('/');
+	 end loop;
+	 New_Line;
+      end loop;
+      
+      --c)Les lignes de fin
+      for Y in 1..(HAUTEUR_BORDURE) loop
+	 for X in  1..(LARGEUR_ECRAN+2*EPAISSEUR_BORDURE) loop
+	    Put('/');
+	 end loop;
+	 New_Line;
+      end loop;
+   end Mise_A_Jour;
+   
+   Continuer : Boolean := True;
+   Ecran : Tab_Ecran; 
+   Saisie : Character;
+   Vie_Max : Integer := 100;
+   Vie_Actuelle : Integer := Vie_Max;
+   Caractere : Character;
+begin
+   --Initialisations Ecran
+   for Y in 1..HAUTEUR_ECRAN loop
+      for X in 1..LARGEUR_ECRAN loop
+	 if(X=Y) then
+	    Caractere := '#';
+	 else
+	    Caractere := ' ';
+	 end if;
+	 Ecran(X, Y) := Caractere;
+      end loop;
+   end loop;
+   
+   while(Continuer) loop
+      --On fait le dessin--
+      New_Line;
+      Mise_A_Jour(Ecran, 1);
+      Put("               PV : ");
+      Put(Vie_Actuelle, 1);
+      Put("/");
+      Put(Vie_Max, 0); --Le deuxième paramètre = Nbr de 0 à gauche
+      New_Line;
+      Put_line(" [F]ight | [E]scape | [L]oose | [P]rout ||[Sq] Save and Quit ");
+      
+      --Le processus de saisie
+      Get(Saisie);
+      if (Saisie = 'E') then
+	 Continuer := False;
+      elsif (Saisie = 'L') then
+	 Vie_Actuelle := Vie_Actuelle - 10;
+      end if;
+      
+      --Conditions de fin
+      
+      --FIN DE LA BOUCLE
+   end loop;
+   
+end jeu;

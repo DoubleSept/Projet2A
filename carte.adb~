@@ -1,0 +1,47 @@
+package body Carte is
+   
+   --Fonction d'initialisation
+   function Initialiser(Chemin_Fichier : String) return Carte is
+      R_Carte : Carte;
+      Temp_Pos : Position;
+      Temp_Id : Integer;
+      Temp_List_Epr : List_Epr;
+   begin
+      --Rajout d'une première épreuve
+      Temp_Pos.X := 2;
+      Temp_Pos.Y := 4;
+      Temp_Id := 1;
+      Ajouter_Epreuve(R_Carte.Liste_Epr, Temp_Pos, Temp_Id, Temp_List_Epr);
+      Rendre_Accessible(Temp_Id);
+      
+      --Position départ
+      R_Carte.Pos_Joueur := Temp_Pos;
+      
+      --Seconde Epreuve
+      Temp_Id := Temp_Id + 1;
+      Temp_Pos.X := 10;
+      Temp_Pos.Y := 8;
+      Ajouter_Epreuve(R_Carte.Liste_Epr, Temp_Pos, Temp_Id, Temp_List_Epr);
+      
+   end Initialiser;
+   
+   --Fonction renvoyant le tableau d'écran
+   function Recuperer_Carte(S_Carte : Carte) return Tab_Ecran is
+      R_Ecran : Tab_Ecran;
+      L_Epr : Liste_Epr;
+   begin
+      --Le fond de carte (...Hatier LOL !)
+      for X in Tableau'Range(1) loop
+	 for Y in Tableau'Range(2) loop
+	    R_Ecran(X, Y) := S_Carte.Ecran_Carte(X, Y);
+	 end loop;
+      end loop;
+      
+      --On réécrit les épreuves
+      L_Epr := S_Carte.Epreuves;
+      
+      while (L_Epr /= null) loop
+	 
+      end loop;
+   end Recuperer_Carte;
+   

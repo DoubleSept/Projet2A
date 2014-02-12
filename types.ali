@@ -1,0 +1,19 @@
+V "GNAT Lib v4.6"
+A -g
+A -gnatq
+A -gnatQ
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U types%s		types.ads		1e91a3fa NE OO PK
+
+D system.ads		20130419124036 23e1f70b
+D types.ads		20140211174327 1e91a3fa
+X 2 types.ads
+1K9*Types 7l5 7e10
+2i4*LARGEUR_ECRAN{integer} 6r31
+3i4*HAUTEUR_ECRAN{integer} 6r49
+4i4*EPAISSEUR_BORDURE{integer}
+5i4*HAUTEUR_BORDURE{integer}
+6A9*Tab_Ecran(character)<integer><integer>
+
