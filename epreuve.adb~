@@ -1,0 +1,35 @@
+with Types, Listes_G;
+use Types;
+
+package Epreuves is
+   --Type Epreuve
+   type Epreuve is private;
+   function To_String(E : Epreuve) return String;
+   
+   package Liste_Epr is new Listes_G(Epreuve, To_String);
+   package L_L_Epr is new Listes_G(List_Epr.Liste, List_Epr.To_String);
+   
+   -------------
+   --Modifier l'épreuve
+   procedure Initialiser(E : in out Epreuve);
+   procedure SetAccessible(B : Boolean; E: in out Epreuve);
+   procedure Placer(Pos : Position; E : in out Epreuve);
+   procedure AjouterSuccesseurs(L : List_Epr.Liste; E : in out Epreuve);
+   
+private
+   ------------
+   --Définitions
+   type Caracteristiques is private; -- Les informations sur le niveau
+      
+   type Epreuve is record -- Une epreuve
+      Caracs : Caracteristiques;
+      Position : Position;
+      Debloque : L_L_Epr;
+   end record;
+   
+   type Caracteristiques is record --Les  caractéristiques propres à l'épreuves
+      Id : Integer;
+      Accessible : Boolean;
+   end record;
+   
+end Epreuves;

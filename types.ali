@@ -3,17 +3,34 @@ A -g
 A -gnatq
 A -gnatQ
 P ZX
-R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U types%s		types.ads		1e91a3fa NE OO PK
+U types%b		types.adb		4068700c NE OO PK
 
-D system.ads		20130419124036 23e1f70b
-D types.ads		20140211174327 1e91a3fa
+U types%s		types.ads		b1dd3222 EE NE OO PK
+
+D system.ads		20120503154647 23e1f70b
+D types.ads		20140502150140 b1dd3222
+D types.adb		20140502150402 f1b5422e
 X 2 types.ads
-1K9*Types 7l5 7e10
-2i4*LARGEUR_ECRAN{integer} 6r31
-3i4*HAUTEUR_ECRAN{integer} 6r49
+1K9*Types 18l5 18e10 3|1b14 23l5 23t10
+2i4*LARGEUR_ECRAN{integer} 8r31
+3i4*HAUTEUR_ECRAN{integer} 8r49
 4i4*EPAISSEUR_BORDURE{integer}
 5i4*HAUTEUR_BORDURE{integer}
-6A9*Tab_Ecran(character)<integer><integer>
+7A9*Tableau_Int(integer)<integer><integer>
+8A9*Tab_Ecran(character)<integer><integer> 16r26 16r44 3|8r27 8r45 9r16
+10R9*Position 13e14 15r27 3|3r27
+11i7*X{natural} 3|5r17 5r24
+12i7*Y{natural} 3|5r33 5r40
+15V13*"="{boolean} 15>17 15>22 3|3b13 6l8 6t11
+15r17 P1{10R9} 3|3b17 5r14 5r30
+15r22 P2{10R9} 3|3b22 5r21 5r37
+16V13*"+"{8A9} 16>17 16>21 3|8b13 21l8 21t11
+16a17 T1{8A9} 3|8b17 11r16 12r19 13r17 16r31
+16a21 T2{8A9} 3|8b22 14r31
+X 3 types.adb
+9a7 Renvoi{2|8A9} 14m16 16m16 20r14
+11i11 Y{integer} 13r22 14r25 14r36 16r25 16r36
+12i14 X{integer} 13r20 14r23 14r34 16r23 16r34
 

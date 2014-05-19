@@ -1,0 +1,18 @@
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use Ada.Text_IO, Ada.Integer_Text_IO;
+
+procedure Fichiers is
+   Prec : Integer;
+   Valeur_Sauvee : Boolean := False;
+   F : File_Type;
+   
+   procedure Ouvrir(Path : in String) is
+   begin
+      Open(F, In_File, Path);
+   end Ouvrir;
+   
+   function IsLigneFinie return Boolean is
+   begin
+      return End_Of_Line(F);
+   
+end Fichiers;

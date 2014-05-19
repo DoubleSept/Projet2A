@@ -1,0 +1,117 @@
+V "GNAT Lib v4.6"
+M P W=b
+A -g
+A -gnatq
+A -gnatQ
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnvnnnnnnvnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+
+U main%b		main.adb		65777290 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W epreuves%s		epreuves.adb		epreuves.ali
+W maps%s		maps.adb		maps.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strunb.ads		20101220072657 e684739b
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D affichage.ads		20140416182738 37ab513a
+D epreuves.ads		20140506094308 7b0e0b85
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D main.adb		20140514100407 779b56da
+D maps.ads		20140514094028 7b00f4cb
+D system.ads		20120503154647 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+D types.ads		20140502150140 b1dd3222
+X 1 ada.ads
+16K9*Ada 19e8 22|1r6 1r19 1r54 1r83 2r5 2r18 2r53 2r82
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[15|45] 22|1w23 2r22
+X 8 a-ioexce.ads
+18K13*IO_Exceptions 30e22 22|1w58 2r57
+X 10 a-string.ads
+16K13*Strings 35e16 22|1r87 2r86
+X 12 a-strunb.ads
+77K21*Unbounded 490e26 22|1w95 2r94
+80R9*Unbounded_String 474e14 22|5r17
+95V13*To_Unbounded_String{80R9} 22|16s21
+101V13*To_String{string} 22|15s16
+112U14*Append 22|53s35
+X 14 a-textio.ads
+49K13*Text_IO 472e16 22|1w10 2r9
+207U14*Get 22|18s7
+250U14*Get_Line 22|32s16 43s16 48s13 55s16
+264U14*Put_Line 22|15s7 17s7 29s39 30s41 33s16 40s39 41s41 44s16 51s39 52s41
+. 56s16 58s25
+X 15 a-tiinio.ads
+55U14*Get 22|23s13[7|18] 24s13[7|18] 37s13[7|18]
+X 19 epreuves.ads
+4K9*Epreuves 78e13 22|1w73 2r72
+6X4*Id_Inexistant 22|53r18
+X 22 main.adb
+4U11*Main 4b11 61l5 61t9
+5r4 Message_TS{12|80R9} 15r26 16m7 53m42
+6a4 Reponse{string} 32m25 43m25 48m22 49r37 55m25
+7i4 Last{natural} 32m34 43m34 48m31 49r48 55m34
+8i4 Temp_Int_1{integer} 23m17 25r27 37m17 38r26
+8i16 Temp_Int_2{integer} 24m17 26r27
+9r4 Temp_Pos{41|10R9} 25m13 26m13 27r37
+10e4 Temp_Char{character} 18m11 20r12
+X 23 maps.ads
+4K9*Maps 22|1w40 2r39 23|18e9
+5X4*Niveau_Inexistant 22|29r18 40r18 51r18
+6X4*Niveau_Inaccessible 22|30r18 41r18 52r18
+10U14*Charger_Niveaux 22|12s4
+12V13*Get_Niveau{integer} 22|27s26
+13V13*Get_Niveau{integer} 22|49s26
+15U14*Finir_Niveau 22|27s13 38s13 49s13
+17U14*Afficher_Carte 22|14s7
+X 41 types.ads
+1K9*Types 22|1w47 2r46 41|18e10
+10R9*Position 22|9r15 41|13e14
+11i7*X{natural} 22|25m22
+12i7*Y{natural} 22|26m22
+

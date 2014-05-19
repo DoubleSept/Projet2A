@@ -1,0 +1,8 @@
+package body Types is
+   
+   function "="(P1 , P2 : Position) return Boolean is
+   begin
+      return P1.X = P2.X and P1.Y = P2.Y;
+   end "=";
+   
+end Types;

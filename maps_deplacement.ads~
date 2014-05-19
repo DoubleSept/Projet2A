@@ -11,8 +11,4 @@ package Types is
       X : Natural;
       Y : Natural;
    end record;
-   
-   function "="(P1 , P2 : Position) return Boolean;
-   function "+"(T1, T2 : Tab_Ecran) return Tab_Ecran;
-   
 end Types;
