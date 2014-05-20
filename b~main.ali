@@ -10,33 +10,33 @@ A -march=x86-64
 P ZX
 R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvvnnvnnnnnnnnnnnnnnn
 
-U ada_main%b		b~main.adb		6bf57bd3 NE OO PK IL
+U ada_main%b		b~main.adb		7147d014 NE OO PK IL
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b~main.ads		4ccc284d EE NE OO PK IL
+U ada_main%s		b~main.ads		15c8fc6a EE NE OO PK IL
 W system%s		system.ads		system.ali
 
-D b~main.ads		20140514100946 6f2ddf46
-D b~main.adb		20140514100946 beb86ba2
-D system.ads		20120503154647 23e1f70b
+D b~main.ads		20140520165254 36290b61
+D b~main.adb		20140520165254 fd0e1442
+D system.ads		20130419124036 23e1f70b
 D s-restri.ads		20091130110856 ba60cf37
 D s-rident.ads		20101018103456 4282a67a
 X 1 b~main.ads
-3K9*ada_main 483l5 483e13 2|7b14 236l5 236t13
-6i4*gnat_argc{integer} 10m22 2|209m7
-7m4*gnat_argv{3|64M9} 11m22 2|210m7
-8m4*gnat_envp{3|64M9} 12m22 2|211m7
-14i4*gnat_exit_status{integer} 15m22 2|219r15
+3K9*ada_main 495l5 495e13 2|7b14 242l5 242t13
+6i4*gnat_argc{integer} 10m22 2|213m7
+7m4*gnat_argv{3|64M9} 11m22 2|214m7
+8m4*gnat_envp{3|64M9} 12m22 2|215m7
+14i4*gnat_exit_status{integer} 15m22 2|223r15
 17a4*GNAT_Version{string} 19r22
-21a4*Ada_Main_Program_Name{string} 22r22 2|205r52
-24U14*adafinal 25r22 2|183b14 186l8 186t16
-27U14*adainit 28r22 2|16b14 181l8 181t15 214s7
-30U14*Break_Start 31b<c,__gnat_break_start>22 2|215s7
-33V13*main{integer} 34>7 35>7 36>7 38r22 2|188b13 220t7
-34i7 argc{integer} 2|189b7 209r20
-35m7 argv{3|64M9} 2|190b7 210r20
-36m7 envp{3|64M9} 2|191b7 211r20
+21a4*Ada_Main_Program_Name{string} 22r22 2|209r52
+24U14*adafinal 25r22 2|187b14 190l8 190t16
+27U14*adainit 28r22 2|16b14 185l8 185t15 218s7
+30U14*Break_Start 31b<c,__gnat_break_start>22 2|219s7
+33V13*main{integer} 34>7 35>7 36>7 38r22 2|192b13 224t7
+34i7 argc{integer} 2|193b7 213r20
+35m7 argv{3|64M9} 2|194b7 214r20
+36m7 envp{3|64M9} 2|195b7 215r20
 40M9*Version_32 41r22 43r22 45r22 47r22 49r22 51r22 53r22 55r22 57r22 59r22
 . 61r22 63r22 65r22 67r22 69r22 71r22 73r22 75r22 77r22 79r22 81r22 83r22
 . 85r22 87r22 89r22 91r22 93r22 95r22 97r22 99r22 101r22 103r22 105r22 107r22
@@ -50,7 +50,7 @@ X 1 b~main.ads
 . 263r22 265r22 267r22 269r22 271r22 273r22 275r22 277r22 279r22 281r22 283r22
 . 285r22 287r22 289r22 291r22 293r22 295r22 297r22 299r22 301r22 303r22 305r22
 . 307r22 309r22 311r22 313r22 315r22 317r22 319r22 321r22 323r22 325r22 327r22
-. 329r22 331r22
+. 329r22 331r22 333r22 335r22 337r22 339r22
 41m4*u00001{40M9} 42r22
 43m4*u00002{40M9} 44r22
 45m4*u00003{40M9} 46r22
@@ -197,74 +197,80 @@ X 1 b~main.ads
 327m4*u00144{40M9} 328r22
 329m4*u00145{40M9} 330r22
 331m4*u00146{40M9} 332r22
+333m4*u00147{40M9} 334r22
+335m4*u00148{40M9} 336r22
+337m4*u00149{40M9} 338r22
+339m4*u00150{40M9} 340r22
 X 2 b~main.adb
-10U14 Do_Finalize 11b<c,system__standard_library__adafinal>22 185s7 217s7
-13a4 Local_Priority_Specific_Dispatching{string} 115r9
-14a4 Local_Interrupt_States{string} 118r27
-17b7*E013{boolean} 17m43 150m7
-18b7*E023{boolean} 18m43 131m7
-19b7*E072{boolean} 19m43 133m7
-20b7*E105{boolean} 20m43 135m7
-21b7*E111{boolean} 21m43 148m7
-22b7*E124{boolean} 22m43 138m7
-23b7*E047{boolean} 23m43 147m7
-24b7*E056{boolean} 24m43 141m7
-25b7*E074{boolean} 25m43 145m7
-26b7*E076{boolean} 26m43 144m7
-27b7*E017{boolean} 27m43 152m7
-28b7*E065{boolean} 28m43 154m7
-29b7*E067{boolean} 29m43 157m7
-30b7*E063{boolean} 30m43 159m7
-31b7*E107{boolean} 31m43 161m7
-32b7*E084{boolean} 32m43 163m7
-33b7*E082{boolean} 33m43 165m7
-34b7*E061{boolean} 34m43 169m7
-35b7*E079{boolean} 35m43 167m7
-36b7*E055{boolean} 36m43 172m7
-37b7*E126{boolean} 37m43 173m7
-38b7*E140{boolean} 38m43 174m7
-39b7*E144{boolean} 39m43 175m7
-40b7*E121{boolean} 40m43 177m7
-41b7*E142{boolean} 41m43 180m7
-43i7*Main_Priority{integer} 44m25 82m7
-45i7*Time_Slice_Value{integer} 46m25 83m7
-47e7*WC_Encoding{character} 48m25 84m7
-49e7*Locking_Policy{character} 50m25 85m7
-51e7*Queuing_Policy{character} 52m25 86m7
-53e7*Task_Dispatching_Policy{character} 54m25 87m7
-55m7*Priority_Specific_Dispatching{3|64M9} 56m25 114m7
-57i7*Num_Specific_Dispatching{integer} 58m25 116m7
-59i7*Main_CPU{integer} 60m25 117m7
-61m7*Interrupt_States{3|64M9} 62m25 118m7
-63i7*Num_Interrupt_States{integer} 64m25 119m7
-65i7*Unreserve_All_Interrupts{integer} 66m25 120m7
-67i7*Zero_Cost_Exceptions{integer} 68m25 121m7
-69i7*Detect_Blocking{integer} 70m25 122m7
-71i7*Default_Stack_Size{integer} 72m25 123m7
-73i7*Leap_Seconds_Support{integer} 74m25 124m7
-76U17*Install_Handler 77b<c,__gnat_install_handler>25 127s10
-79i7*Handler_Installed{integer} 80m25 126r10
-194U17*initialize 194>29 195b<c,__gnat_initialize>25 213s7
-194m29 Addr{3|64M9}
-197U17*finalize 198b<c,__gnat_finalize>25 218s7
-200U17*Ada_Main_Program 201b<ada,_ada_main>27 216s7
-203a7 SEH(integer) 213m19
-205m7 Ensure_Reference{3|64M9} 206r24
+10U14 Do_Finalize 11b<c,system__standard_library__adafinal>22 189s7 221s7
+13a4 Local_Priority_Specific_Dispatching{string} 117r9
+14a4 Local_Interrupt_States{string} 120r27
+17b7*E013{boolean} 17m43 152m7
+18b7*E023{boolean} 18m43 133m7
+19b7*E072{boolean} 19m43 135m7
+20b7*E105{boolean} 20m43 137m7
+21b7*E111{boolean} 21m43 150m7
+22b7*E138{boolean} 22m43 140m7
+23b7*E047{boolean} 23m43 149m7
+24b7*E056{boolean} 24m43 143m7
+25b7*E074{boolean} 25m43 147m7
+26b7*E076{boolean} 26m43 146m7
+27b7*E017{boolean} 27m43 154m7
+28b7*E065{boolean} 28m43 156m7
+29b7*E067{boolean} 29m43 159m7
+30b7*E063{boolean} 30m43 161m7
+31b7*E107{boolean} 31m43 163m7
+32b7*E084{boolean} 32m43 165m7
+33b7*E082{boolean} 33m43 167m7
+34b7*E061{boolean} 34m43 171m7
+35b7*E079{boolean} 35m43 169m7
+36b7*E055{boolean} 36m43 174m7
+37b7*E140{boolean} 37m43 175m7
+38b7*E125{boolean} 38m43 176m7
+39b7*E123{boolean} 39m43 177m7
+40b7*E135{boolean} 40m43 179m7
+41b7*E148{boolean} 41m43 182m7
+42b7*E133{boolean} 42m43 183m7
+43b7*E121{boolean} 43m43 184m7
+45i7*Main_Priority{integer} 46m25 84m7
+47i7*Time_Slice_Value{integer} 48m25 85m7
+49e7*WC_Encoding{character} 50m25 86m7
+51e7*Locking_Policy{character} 52m25 87m7
+53e7*Queuing_Policy{character} 54m25 88m7
+55e7*Task_Dispatching_Policy{character} 56m25 89m7
+57m7*Priority_Specific_Dispatching{3|64M9} 58m25 116m7
+59i7*Num_Specific_Dispatching{integer} 60m25 118m7
+61i7*Main_CPU{integer} 62m25 119m7
+63m7*Interrupt_States{3|64M9} 64m25 120m7
+65i7*Num_Interrupt_States{integer} 66m25 121m7
+67i7*Unreserve_All_Interrupts{integer} 68m25 122m7
+69i7*Zero_Cost_Exceptions{integer} 70m25 123m7
+71i7*Detect_Blocking{integer} 72m25 124m7
+73i7*Default_Stack_Size{integer} 74m25 125m7
+75i7*Leap_Seconds_Support{integer} 76m25 126m7
+78U17*Install_Handler 79b<c,__gnat_install_handler>25 129s10
+81i7*Handler_Installed{integer} 82m25 128r10
+198U17*initialize 198>29 199b<c,__gnat_initialize>25 217s7
+198m29 Addr{3|64M9}
+201U17*finalize 202b<c,__gnat_finalize>25 222s7
+204U17*Ada_Main_Program 205b<ada,_ada_main>27 220s7
+207a7 SEH(integer) 217m19
+209m7 Ensure_Reference{3|64M9} 210r24
 X 3 system.ads
-37K9*System 1|2w6 7r16 8r16 35r14 36r14 2|5r6 55r39 61r26 88r7 190r14 191r14
-. 194r36 205r34 3|153e11
-64M9*Address 1|7r23 8r23 35r21 36r21 2|55r46 61r33 190r21 191r21 194r43 205r41
+37K9*System 1|2w6 7r16 8r16 35r14 36r14 2|5r6 57r39 63r26 90r7 194r14 195r14
+. 198r36 209r34 3|153e11
+64M9*Address 1|7r23 8r23 35r21 36r21 2|57r46 63r33 194r21 195r21 198r43 209r41
 X 4 s-restri.ads
-45K16*Restrictions 2|5w13 88r14 4|73e24
-51r4*Run_Time_Restrictions{5|258R9[49]} 2|88m27
+45K16*Restrictions 2|5w13 90r14 4|73e24
+51r4*Run_Time_Restrictions{5|258R9[49]} 2|90m27
 X 5 s-rident.ads
 254A9*Restriction_Flags(boolean)<55E9[4|49]>
 255A9*Restriction_Values(natural)<55E9[4|49]>
 256A9*Parameter_Flags(boolean)<55E9[4|49]>
 258R9*Restrictions_Info
-259a7*Set{254A9[4|49]} 2|89m10[4|49]
-265a7*Value{255A9[4|49]} 2|100m10[4|49]
-272a7*Violated{254A9[4|49]} 2|101m10[4|49]
-277a7*Count{255A9[4|49]} 2|112m10[4|49]
-285a7*Unknown{256A9[4|49]} 2|113m10[4|49]
+259a7*Set{254A9[4|49]} 2|91m10[4|49]
+265a7*Value{255A9[4|49]} 2|102m10[4|49]
+272a7*Violated{254A9[4|49]} 2|103m10[4|49]
+277a7*Count{255A9[4|49]} 2|114m10[4|49]
+285a7*Unknown{256A9[4|49]} 2|115m10[4|49]
 

@@ -1,0 +1,110 @@
+
+package body Personnage is
+   procedure Init_Perso(Perso : in out Personnage;Nom : P_String) is
+   begin
+      Perso.Nom := Nom;
+      Perso.Niveau := 0;
+      Perso.Exp := 0;
+      Perso.ExpSuivant := 5000;
+      Perso.VieMax := 100;
+      Perso.Vie := VieMax;
+      Perso.EnduMax := 100;
+      Perso.Endurance := EnduMax;
+      Perso.Force := 100;
+      Perso.Defense := 0;
+      Perso.PointsNiveaux:=0;
+      Perso.Arc:=False; --Si pas d'arc, c'est du CaC
+   end Init_Perso;
+      
+   
+   --Fonctions de Niveaux
+   procedure GagnerExp(PersoVict : in out Personnage; PersoDefait : in out Personnage) is
+   begin
+      --On rajoute l'exp
+      PersoVict.Exp := PersoVict.Exp + PersoDefait.VieMax*PersoVict.Vie + PersoVict.Endurance*PersoVict.EnduMax;
+      --On regarde si on a gagner un niveau
+      while PersoVict.Exp > PersoVict.ExpSuivant loop
+	 MonterNiveaux(Perso);
+      end loop;
+   end GagnerExp;
+   
+   procedure MonterNiveaux(Perso : in out Personnage) is
+   begin
+      Perso.Niveau := Perso.Niveau+1;
+      --Les rajouts par défaut
+      Perso.PointsNiveaux := Perso.PointsNiveaux+1;
+      
+      --Calcul de l'exp du niveau suivant
+      Perso.ExpSuivant := Perso.ExpSuivant + (Perso.ExpSuivant*Perso.Niveau)/10;
+   end MonterNiveaux;
+   
+   procedure SubirDegats(Receveur : in out Personnage; PtsDegats : in Natural; Mort : out Boolean) is
+   begin
+      Receveur.Vie := Receveur.Vie - PtsDegats*(100-Receveur.Defense)/100;
+      
+      --On regarde si on est mort
+      if Receveur.Vie <= 0 then
+	 Receveur.Vie := 0;
+	 Mort := True;
+      end if;
+   end SubirDegats;
+   
+   ----------------
+   --FONCTIONS AFFICHAGE
+   -----
+   --Afficher l'inventaire
+   function AfficherInventaire(Perso : in Personnage) return Tab_Ecran is
+      T : Tab_Ecran := (others => (others => ' '));
+      P_Temp : Position;
+      S : P_String;
+      X_Droite : Integer; --Emplacement du début de la colonne de droite
+   begin
+      --Le nom
+      P_Temp.X := 2;
+      P_Temp.Y := 2;
+      S := new String("Nom : " & Perso.Nom.all);
+      Ecrire(P_Temp, S, T);
+      
+      --Traits
+      X_Droite := (S.all'Length)+1;
+      TracerVertical(X_Droite-1, T);
+      TracerHorizontal(3, T, 1, X_Droite-1);
+      
+      --Les points restants
+		     P_Temp.Y := T'Last(2)-1;
+		     FreeStr(S);
+      S := new String("Vous avez " & Integer'Image(Perso.PointsNiveaux) & " points a dépenser");
+      P_Temp.X := T'Last(1)-(S.all'Length + 1);
+      Ecrire(P_Temp, S.all, Perso.Nom, T);
+   end AfficherInventaire;
+   
+   procedure MenuInventaire(P : in Personnage) is
+      Message_TS : Unbounded_String;
+      Reponse : String(1..50);
+      Last : Natural;
+      Temp_Char : Character;
+      Continuer : Boolean := True;
+   begin
+      while Continuer loop
+	 Afficher_Inventaire(P);
+	 Put_Line(To_String(Message_TS));
+	 Message_TS := To_Unbounded_String("");
+	 Put_Line("[D]epenser vos points ou [Q]uitter");
+	 Get(Temp_Char);
+	 --On regarde le type de déplacement choisi
+	 begin
+	    case Temp_Char is
+	       --Position
+	       when 'Q' or 'q' =>
+		  Continuer := False;
+	       when 'D' =>
+		  Append(Message_TS, "Pas encore codé... sorry :/");
+	       when others => Append(Message_TS, "Commande inconnue");
+	    end case;
+	 exception
+	    when others => Append(Message_TS, "Il y a une erreur !!!!!!");
+	 end;
+      end loop;
+   end MenuInventaire;   
+   
+end Personnage;

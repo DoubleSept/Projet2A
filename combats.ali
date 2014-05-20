@@ -1,30 +1,33 @@
 V "GNAT Lib v4.6"
-M P AB W=b
 A -g
 A -gnatq
 A -gnatQ
 P SS ZX
-R nnnvnnnnnnnnnnnnnnnnnnnnnvnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+R nnnvnnnnnnnnnnnnnnvnnvnnnvvnnvnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
 
-U main%b		main.adb		b15ff798 NE OO SU
+U combats%b		combats.adb		eba57b19 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
-W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W combats%s		combats.adb		combats.ali
-W epreuves%s		epreuves.adb		epreuves.ali
-W maps%s		maps.adb		maps.ali
-W personnages%s		personnages.adb		personnages.ali
+W affichage%s		affichage.adb		affichage.ali
 W system%s		system.ads		system.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
 W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
 W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U combats%s		combats.ads		e80a42da EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W personnages%s		personnages.adb		personnages.ali
 W types%s		types.adb		types.ali
 
 D ada.ads		20070406091342 3ffc8e18
@@ -46,18 +49,18 @@ D a-unccon.ads		20070406091342 f9eb8f06
 D a-uncdea.ads		20070406091342 f15a5ed1
 D affichage.ads		20140520101513 c420d891
 D combats.ads		20140520163724 f0860cb1
-D epreuves.ads		20140520163553 2789ee34
+D combats.adb		20140520163838 f7a1a0d2
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D main.adb		20140520164915 57eff228
-D maps.ads		20140520103732 6c8833e3
 D personnages.ads	20140520163003 50ee9f4f
 D system.ads		20130419124036 23e1f70b
+D s-conca4.ads		20090420091404 025fe3be
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
 D s-finimp.ads		20090409150019 46853fe8
 D s-finroo.ads		20090409150019 dbb860c9
+D s-imgint.ads		20090409150019 02dbe0c2
 D s-parame.ads		20091130110856 9c5d83fa
 D s-secsta.ads		20090707124243 eea35a36
 D s-soflin.ads		20090729085153 9414c974
@@ -71,53 +74,56 @@ D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 D types.ads		20140520150746 aee6a2bf
 X 1 ada.ads
-16K9*Ada 19e8 23|1r6 1r19 1r54 1r83 2r5 2r18 2r53 2r82
+16K9*Ada 19e8 19|1r13 2r12 20|1r6 1r29 1r42 2r5 2r28 2r41
 X 7 a-inteio.ads
-18K13*Integer_Text_IO[15|45] 23|1w23 2r22
-X 8 a-ioexce.ads
-18K13*IO_Exceptions 30e22 23|1w58 2r57
+18K13*Integer_Text_IO[15|45] 20|1w46 2r45
 X 10 a-string.ads
-16K13*Strings 35e16 23|1r87 2r86
+16K13*Strings 35e16 19|1r17 2r16 20|1r10 2r9
 X 12 a-strunb.ads
-77K21*Unbounded 490e26 23|1w95 2r94
-80R9*Unbounded_String 474e14 23|5r17
-95V13*To_Unbounded_String{80R9} 23|20s21
-101V13*To_String{string} 23|19s16
-112U14*Append 23|44s34 46s28
+77K21*Unbounded 490e26 19|1w25 2r24 20|1w18 2r17
+80R9*Unbounded_String 474e14 19|6r96 20|6r96 7r20
+95V13*To_Unbounded_String{80R9} 20|58s24
+101V13*To_String{string} 20|57s19
+112U14*Append 20|67s31 70s28
 X 14 a-textio.ads
-49K13*Text_IO 472e16 23|1w10 2r9
-167U14*New_Line 23|38s16
-207U14*Get 23|23s7 40s16
-264U14*Put_Line 23|19s7 21s7 39s16
+49K13*Text_IO 472e16 20|1w33 2r32
+167U14*New_Line 20|25s10 39s10 53s10 56s10
+207U14*Get 20|60s10
+209U14*Put 20|22s13 36s13 50s13
+243U14*Put 20|19s10 24s10 34s10 38s10 48s10 52s10
+264U14*Put_Line 20|57s10 59s10
+X 18 affichage.ads
+4K9*Affichage 6e14 20|1w63 2r62
+5U14*Afficher_Ecran 20|16s10
 X 19 combats.ads
-4K9*combats 9e12 23|1w119 2r118
-6U14*Combat 23|32s19
-X 20 epreuves.ads
-4K9*Epreuves 79e13 23|1w73 2r72
-13P9*Pointeur_Epr(9R9) 23|9r12
-X 23 main.adb
-4U11*Main 4b11 52l5 52t9
-5r4 Message_TS{12|80R9} 19r26 20m7 32m39 36m38 44m41 46m35
-6a4 Reponse{string}
-7i4 Last{natural}
-8e4 Temp_Char{character} 23m11 26r15 40m20 41r21
-9p4 P_Epr{20|13P9} 29m16 31r19 33r32
-10r4 Heros{25|6R9} 15m15 32m26 36m31
-11p4 S{43|12P9}
-12b4 Continuer{boolean} 17r10 43m22
-13r4 BadG{25|6R9} 30m27 32m33
-X 24 maps.ads
-4K9*Maps 23|1w40 2r39 24|19e9
-10U14*Charger_Niveaux 23|16s4
-15U14*Finir_Niveau 23|33s19
-17U14*Afficher_Carte 23|18s7
-18V13*Choix_Niveaux{20|13P9} 23|29s25
-X 25 personnages.ads
-4K9*personnages 23|1w106 2r105 25|42e16
-6R9*Personnage 23|10r12 13r11 25|41e14
-10U14*Init_Perso 23|15s4 30s16
-27U14*MenuInventaire 23|36s16
+4K9*combats 9l5 9e12 20|4b14 76l5 76t12
+6U14*Combat 6=21 6=48 6<74 20|6b14 74l8 74t14
+6r21 Heros{23|6R9} 20|6b21 19r18 20r47 30r59 30r93 44r71 44r106
+6r48 BadG{23|6R9} 20|6b48 20r67 24r18 31r59 31r92 45r71 45r105
+6r74 Message_TS_Pere{12|80R9} 20|6b74 73m7
+X 20 combats.adb
+7r7 Message_TS{12|80R9} 57r29 58m10 67m38 70m35 73r26
+8a7 Reponse{string}
+9i7 Last{natural}
+10e7 Temp_Char{character} 60m14 63r18
+11b7 Continuer{boolean} 15r13 66m19
+12i7 Temp_Int{integer} 20m10 21r22 32m10 35r22 46m10 49r22
+13p7 Temp_S1{43|12P9} 28m18 30m10 32r43 34r14 42m18 44m10 46r43 48r14
+13p16 Temp_S2{43|12P9} 29m18 31m10 32r60 38r14 43m18 45m10 46r60 52r14
+21i14 N{integer}
+35i14 N{integer}
+49i14 N{integer}
+X 23 personnages.ads
+4K9*personnages 19|1w36 2r35 23|42e16
+6R9*Personnage 19|6r36 6r62 20|6r36 6r62 23|41e14
+13V13*Nom{string} 20|19s14 20s43 20s63 24s14
+14V13*Vie{natural} 20|30s55 31s55
+15V13*VieMax{natural} 20|30s86 31s85
+16V13*Endurance{natural} 20|44s61 45s61
+17V13*EnduMax{natural} 20|44s98 45s97
 X 43 types.ads
-3K9*Types 23|1w47 2r46 43|26e10
-12P9*P_String(string) 23|11r7
+3K9*Types 19|1w6 2r5 43|26e10
+4i4*LARGEUR_ECRAN{integer} 20|20r23 32r23 46r23
+12P9*P_String(string) 20|13r26
+13U14*FreeStr[17|20] 20|28s10 29s10 42s10 43s10
 

@@ -1,0 +1,203 @@
+V "GNAT Lib v4.6"
+A -g
+A -gnatq
+A -gnatQ
+P SS ZX
+R nnnvnnnnnnvnnnnnnnvnnvnnnvvnnvnvnnvnnnnnnvnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+
+U personnages%b		personnages.adb		bad30425 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W affichage%s		affichage.adb		affichage.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U personnages%s		personnages.ads		188c4e6b EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20070912115821 2825df20
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-string.ads		20070406091342 90ac6797
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strunb.ads		20101220072657 e684739b
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D affichage.ads		20140520101513 c420d891
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D personnages.ads	20140520163003 50ee9f4f
+D personnages.adb	20140520164941 06bf4c10
+D system.ads		20130419124036 23e1f70b
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-conca3.ads		20090420091404 762a026a
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+D types.ads		20140520150746 aee6a2bf
+X 1 ada.ads
+16K9*Ada 19e8 21|1r13 2r12 22|1r6 1r29 1r42 2r5 2r28 2r41
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[15|45] 22|1w46 2r45
+X 10 a-string.ads
+16K13*Strings 35e16 21|1r17 2r16 22|1r10 2r9
+X 12 a-strunb.ads
+77K21*Unbounded 490e26 21|1w25 2r24 22|1w18 2r17
+80R9*Unbounded_String 474e14 21|27r74 28r78 22|175r74 176r20 213r78 214r20
+95V13*To_Unbounded_String{80R9} 22|186s24 222s21 226s24
+101V13*To_String{string} 22|185s19 225s19
+112U14*Append 22|202s22 204s31 207s28 237s19 241s22 243s22 248s19 251s19
+. 254s19 256s19 259s19 266s28
+X 14 a-textio.ads
+49K13*Text_IO 472e16 22|1w33 2r32
+207U14*Get 22|188s10 228s10
+264U14*Put_Line 22|185s10 187s10 225s10 227s10
+X 15 a-tiinio.ads
+55U14*Get 22|196s19[7|18]
+X 18 affichage.ads
+4K9*Affichage 6e14 22|1w63 2r62
+5U14*Afficher_Ecran 22|184s10 224s10
+X 21 personnages.ads
+4K9*personnages 42l5 42e16 22|4b14 272l5 272t16
+6R9*Personnage 10r40 13r24 14r24 15r27 16r30 17r28 20r44 21r43 21r76 22r39
+. 23r43 26r43 27r40 28r44 32c9 41e14 22|5r40 24r43 24r76 30r39 38r43 53r24
+. 58r24 63r27 68r30 73r28 81r44 96r43 175r40 213r44
+7i4*PallierExp{natural} 22|45r46 45r60
+10U14*Init_Perso 10=25 10>51 22|5b14 20l8 20t18
+10r25 Perso{6R9} 22|5b25 7m15 8m7 9m7 10m7 11m7 12m7 13m7 13r20 14m7 15m7
+. 15r26 16m7 17m7 18m7 19m7
+10p51 Nom{43|12P9} 22|5b51 8r20
+13V13*Nom{string} 13>17 22|53b13 56l8 56t11
+13r17 P{6R9} 22|53b17 55r14
+14V13*Vie{natural} 14>17 22|58b13 61l8 61t11
+14r17 P{6R9} 22|58b17 60r14
+15V13*VieMax{natural} 15>20 22|63b13 66l8 66t14
+15r20 P{6R9} 22|63b20 65r14
+16V13*Endurance{natural} 16>23 22|68b13 71l8 71t17
+16r23 P{6R9} 22|68b23 70r14
+17V13*EnduMax{natural} 17>21 22|73b13 76l8 76t15
+17r21 P{6R9} 22|73b21 75r14
+20U14*SubirDegats 20=26 20>56 20<80 22|81b14 90l8 90t19
+20r26 Receveur{6R9} 22|81b26 83m7 83r23 83r53 86r10 87m10
+20i56 PtsDegats{natural} 22|81b56 83r38
+20b80 Mort{boolean} 22|81b80 88m10
+21U14*GagnerExp 21=24 21=55 22|24b14 28l8 28t17
+21r24 PersoVict{6R9} 22|24b24 27m17 27r47 27r63 27r83
+21r55 PersoDefait{6R9} 22|24b55 27r28
+22U14*GagnerExp 22=24 22>51 22|27s7 30b14 36l8 36t17 197s19
+22r24 Perso{6R9} 22|30b24 32m7 32r20 33r13 33r25 34m24
+22i51 Exp{integer} 22|30b51 32r32
+23U14*MonterNiveaux 23=28 22|34s10 38b14 50l8 50t21
+23r28 Perso{6R9} 22|38b28 40m7 40r20 42m7 42r30 45m7 45r27 45r71 48m7 48r20
+. 49m7 49r26
+26V13*AfficherInventaire{43|11A9} 26>32 22|96b13 173l8 173t26 184s25 224s25
+26r32 Perso{6R9} 22|96b32 106r32 121r38 121r68 131r38 131r74 141r38 151r38
+. 158r52 164r47 169r38 169r68
+27U14*MenuInventaire 27=29 27<52 22|175b14 211l8 211t22
+27r29 P{6R9} 22|175b29 184r44 197m29 199r22 200m41
+27r52 Message_TS_Pere{12|80R9} 22|175b52 210m7
+28U14*MenuDepenserPoints 28=33 28<56 22|200s22 213b14 270l8 270t26
+28r33 P{6R9} 22|213b33 223r27 224r44 239r22 240m22 240r35 247m19 247r31 247r44
+. 250m19 250r32 253m19 253r30 253r43 263m16 263r35
+28r56 Message_TS_Pere{12|80R9} 22|213b56 269m7
+31E9 Pers_Position 31e47
+31n27 Debout{31E9}
+31n35 Assis{31E9}
+31n42 Saut{31E9}
+33p7*Nom{43|12P9} 22|7m21 8m13 55r16 106r38
+34i7*Niv{natural} 22|9m13 40m13 40r26 45r77 164r53
+34i12*Exp{natural} 22|10m13 32m13 32r26 33r19 169r44
+34i17*ExpSuivant{natural} 22|11m13 33r31 45m13 45r33 169r74
+35i7*Vie{natural} 22|13m13 27r57 48m13 60r16 83m16 83r32 86r19 87m19 121r44
+. 247r46
+35i12*VieMax{natural} 22|12m13 13r26 27r40 48r26 65r16 121r74 247m21 247r33
+36i7*Endurance{natural} 22|15m13 27r73 49m13 70r16 131r44
+36i18*EnduMax{natural} 22|14m13 15r32 27r93 49r32 75r16 131r80 250m21 250r34
+37i7*Force{natural} 22|16m13 141r44 253m21 253r32 253r45
+38i7*Defense{natural} 22|17m13 83r62 151r44 239r24 240m24 240r37
+39i7*PointsNiveaux{natural} 22|18m13 42m13 42r36 158r58 199r24 223r29 263m18
+. 263r37
+40b7*Arc{boolean} 22|19m13
+X 22 personnages.adb
+97a7 T{43|11A9} 106m47 110m33 111m26 119m31 122r21 123m31 129m31 132r21 133m31
+. 139m31 142r21 143m31 149m31 152r21 153m31 156r21 159r21 160m31 167m31 170r21
+. 171m31 172r14
+98r7 Pos_Temp{43|15R9} 103m7 104m7 106r14 117m7 118m7 118r21 119r14 122m7
+. 123r14 127m7 128m7 128r21 129r14 132m7 133r14 137m7 138m7 138r21 139r14
+. 142m7 143r14 147m7 148m7 148r21 149r14 152m7 153r14 156m7 159m7 160r14
+. 165m7 166m7 166r21 167r14 170m7 171r14
+99p7 S{43|12P9} 105m7 106r24 109r20 115m15 116m7 119r24 120m15 121m7 122r32
+. 123r24 125m15 126m7 129r24 130m15 131m7 132r32 133r24 135m15 136m7 139r24
+. 140m15 141m7 142r32 143r24 145m15 146m7 149r24 150m15 151m7 152r32 153r24
+. 157m15 158m7 159r32 160r24 163m15 164m7 167r24 168m15 169m7 170r32 171r24
+100i7 X_Droite{integer} 109m7 110r21 111r32 117r21 127r21 137r21 147r21 165r21
+176r7 Message_TS{12|80R9} 185r29 186m10 200m44 202m29 204m38 207m35 210r26
+177a7 Reponse{string}
+178i7 Last{natural}
+179e7 Temp_Char{character} 188m14 191r18
+180b7 Continuer{boolean} 183r13 194m19
+181i7 Temp_Int{integer} 196m23 197r32
+214r7 Message_TS{12|80R9} 222m7 225r29 226m10 237m26 241m29 243m29 248m26
+. 251m26 254m26 256m26 259m26 266m35 269r26
+215a7 Reponse{string}
+216i7 Last{natural}
+217e7 Temp_Char{character} 228m14 232r18
+218b7 Continuer{boolean} 223r13 235m19
+219i7 Temp_Int{integer}
+220b7 PointDepense{boolean} 231m13 236m19 244m22 258m19 262r16
+X 43 types.ads
+3K9*Types 21|1w6 2r5 43|26e10
+8i4*LONGUEUR_MAX_NOM{integer} 22|109r34
+11A9*Tab_Ecran(character)<integer><integer> 21|26r62 22|96r62 97r11
+12P9*P_String(string) 21|10r57 33r13 22|5r57 99r11
+13U14*FreeStr[17|20] 22|7s7 115s7 120s7 125s7 130s7 135s7 140s7 145s7 150s7
+. 157s7 163s7 168s7
+15R9*Position 22|98r18 43|18e14
+16i7*X{natural} 22|103m16 117m16 122m16 127m16 132m16 137m16 142m16 147m16
+. 152m16 159m16 165m16 170m16
+17i7*Y{natural} 22|104m16 118m16 118r30 128m16 128r30 138m16 138r30 148m16
+. 148r30 156m16 166m16 166r30
+22U14*Ecrire 22|106s7 119s7 123s7 129s7 133s7 139s7 143s7 149s7 153s7 160s7
+. 167s7 171s7
+23U14*TraitVertical 22|110s7
+24U14*TraitHorizontal 22|111s7
+

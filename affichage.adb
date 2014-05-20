@@ -2,38 +2,42 @@ with Ada.Text_IO, Types;
 use Ada.Text_IO, Types;
 
 package body Affichage is
-   procedure Afficher_Ecran(T : Tab_Ecran; Bord : Integer) is
+   procedure Afficher_Ecran(T : Tab_Ecran) is
    begin
       Put(ASCII.ESC & "[H" & ASCII.ESC & "[J");
       --Ligne de départ
-      for Y in 1..Bord loop
-	 for X in 1..T'Length(1) + 2*Bord loop
-	    Put('/');
-	 end loop;
-	 New_Line;
+      Put("╔");
+      for X in 1..T'Length(1) loop
+	    Put("═");
       end loop;
+      Put("╗");
+      New_Line;
       
       --Corps
       for Y in T'Range(2) loop
-	 for X in 1..Bord loop
-	    Put('/');
-	 end loop;
+	 Put("║");
 	 for X in T'Range(1) loop
-	    Put(T(X, Y));
+	    case T(X,Y) is
+	       when Character'Val(197)=> Put("┼");
+	       when Character'Val(196)=> Put("─");
+	       when Character'Val(179)=> Put("│");
+	       when Character'Val(167)|Character'Val(248)=>Put("°");
+	       when Character'Val(00)..Character'Val(31) | Character'Val(255)=> Put(' ');	  
+	       when others=> Put(T(X, Y));
+	    end case;
 	 end loop;
-	 for X in 1..Bord loop
-	    Put('/');
-	 end loop;
+	 
+	 Put("║"); --Carac : ║
 	 New_Line;
       end loop;
       
-      --Lignes finales
-      for Y in 1..Bord loop
-	 for X in 1..T'Length(1) + 2*Bord loop
-	    Put('/');
-	 end loop;
-	 New_Line;
+      --Ligne finales
+      Put("╚");
+      for X in 1..T'Length(1) loop
+	    Put("═");
       end loop;
+      Put("╝");
+      New_Line;
    end Afficher_Ecran;
    
 end Affichage;

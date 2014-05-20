@@ -19,7 +19,7 @@ package body ada_main is
       E072 : Boolean; pragma Import (Ada, E072, "ada__io_exceptions_E");
       E105 : Boolean; pragma Import (Ada, E105, "ada__strings_E");
       E111 : Boolean; pragma Import (Ada, E111, "ada__strings__maps_E");
-      E124 : Boolean; pragma Import (Ada, E124, "ada__strings__maps__constants_E");
+      E138 : Boolean; pragma Import (Ada, E138, "ada__strings__maps__constants_E");
       E047 : Boolean; pragma Import (Ada, E047, "ada__tags_E");
       E056 : Boolean; pragma Import (Ada, E056, "ada__streams_E");
       E074 : Boolean; pragma Import (Ada, E074, "interfaces__c_E");
@@ -34,11 +34,13 @@ package body ada_main is
       E061 : Boolean; pragma Import (Ada, E061, "system__file_io_E");
       E079 : Boolean; pragma Import (Ada, E079, "system__os_lib_E");
       E055 : Boolean; pragma Import (Ada, E055, "ada__text_io_E");
-      E126 : Boolean; pragma Import (Ada, E126, "listes_g_E");
-      E140 : Boolean; pragma Import (Ada, E140, "types_E");
-      E144 : Boolean; pragma Import (Ada, E144, "affichage_E");
-      E121 : Boolean; pragma Import (Ada, E121, "epreuves_E");
-      E142 : Boolean; pragma Import (Ada, E142, "maps_E");
+      E140 : Boolean; pragma Import (Ada, E140, "listes_g_E");
+      E125 : Boolean; pragma Import (Ada, E125, "types_E");
+      E123 : Boolean; pragma Import (Ada, E123, "affichage_E");
+      E135 : Boolean; pragma Import (Ada, E135, "epreuves_E");
+      E148 : Boolean; pragma Import (Ada, E148, "maps_E");
+      E133 : Boolean; pragma Import (Ada, E133, "personnages_E");
+      E121 : Boolean; pragma Import (Ada, E121, "combats_E");
 
       Main_Priority : Integer;
       pragma Import (C, Main_Priority, "__gl_main_priority");
@@ -99,7 +101,7 @@ package body ada_main is
            False),
          Value => (0, 0, 0, 0, 0, 0, 0),
          Violated =>
-          (False, False, True, True, False, False, False, False, 
+          (False, False, True, True, True, False, False, False, 
            True, False, True, True, True, False, False, True, 
            False, False, True, True, False, True, True, True, 
            True, True, True, False, False, True, False, True, 
@@ -135,7 +137,7 @@ package body ada_main is
       E105 := True;
       Ada.Strings.Maps'Elab_Spec;
       Ada.Strings.Maps.Constants'Elab_Spec;
-      E124 := True;
+      E138 := True;
       Ada.Tags'Elab_Spec;
       Ada.Streams'Elab_Spec;
       E056 := True;
@@ -170,14 +172,16 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E055 := True;
-      E126 := True;
       E140 := True;
-      E144 := True;
+      E125 := True;
+      E123 := True;
       Epreuves'Elab_Spec;
-      E121 := True;
+      E135 := True;
       Maps'Elab_Spec;
       Maps'Elab_Body;
-      E142 := True;
+      E148 := True;
+      E133 := True;
+      E121 := True;
    end adainit;
 
    procedure adafinal is
@@ -225,9 +229,11 @@ package body ada_main is
    --   ./affichage.o
    --   ./epreuves.o
    --   ./maps.o
+   --   ./personnages.o
+   --   ./combats.o
    --   ./main.o
    --   -L./
-   --   -L/home/ggomez/Algo/Projet-2A/Projet/
+   --   -L/home/massal/Projets/Projet-2A/
    --   -L/usr/lib/gcc/x86_64-linux-gnu/4.6/adalib/
    --   -shared
    --   -lgnat-4.6

@@ -63,7 +63,7 @@ package body  Maps is
       when Epreuves.Id_Inexistant => Put_Line("INEXISTANT (" & Integer'Image(Temp_Int) &") => " & L_Epr_To_String(Niveaux));
    end Charger_Niveaux;
    
-   function Get_Niveau(Pos : Position) return Integer is
+   function Get_Niveau(Pos : Position) return Pointeur_Epr is
       Temp_L : Pointeur_L_Epr := Niveaux;
       Renvoi : Pointeur_Epr := null;
    begin
@@ -77,7 +77,7 @@ package body  Maps is
       if(Renvoi = null) then
 	raise Niveau_Inexistant;
       end if;
-      return Get_Id(Renvoi);
+      return Renvoi;
    end Get_Niveau;
    
    function Get_Niveau(Nom : String) return Integer is
@@ -91,11 +91,6 @@ package body  Maps is
       return Get_Id(Renvoi);
    end Get_Niveau;
    
-   procedure Afficher_Carte(Largeur_Trait : Integer) is
-   begin
-      Afficher_Ecran((L_Epr_To_Tab_Ecran(Niveaux)+Ecran_Niveaux) , Largeur_Trait);
-   end Afficher_Carte;
-   
    procedure Finir_Niveau(Id : Integer) is
    begin
       if Get_Accessible(Trouver_Par_Id(Id, Niveaux)) then
@@ -105,16 +100,94 @@ package body  Maps is
       end if;
    end Finir_Niveau;
    
+   procedure Finir_Niveau(P_Epr : Pointeur_Epr) is
+   begin
+      Finir_Niveau(Get_Id(P_Epr));
+   end Finir_Niveau;
+   
+   --FONCTIONS D'AFFICHAGE
+   
+   procedure Afficher_Carte is
+   begin
+      Afficher_Ecran((L_Epr_To_Tab_Ecran(Niveaux)+Ecran_Niveaux));
+   end Afficher_Carte;
+   
+   function Choix_Niveaux return Pointeur_Epr is
+      P_Epr : Pointeur_Epr := null;
+      Choisi : Boolean := False;
+      Message_TS : Unbounded_String;
+      Reponse : String(1..50);
+      Last : Natural;
+      Temp_Int_1, Temp_Int_2 : Integer;
+      Temp_Pos : Position;
+      Temp_Char : Character;
+   begin
+      while not Choisi loop
+	 Afficher_Carte;
+	 Put_Line(To_String(Message_TS));
+	 Message_TS := To_Unbounded_String("");
+	 Put_Line("Choisir un niveau par [N]om, [P]osition ou Nu[M]éro ?");
+	 Get(Temp_Char);
+	 --On regarde le type de déplacement choisi
+	 begin
+	 case Temp_Char is
+	    --Position
+	    when 'P'|'p' =>
+	       Get(Temp_Int_1);
+	       Get(Temp_Int_2);
+	       Temp_Pos.X := Temp_Int_1;
+	       Temp_Pos.Y := Temp_Int_2;
+	       P_Epr := Get_Niveau(Temp_Pos);
+	       Choisi := True;
+	    --Id
+	    when 'M'|'m' =>
+	       Get(Temp_Int_1);
+	       P_Epr := Trouver_Par_Id(Temp_Int_1, Niveaux);
+	       Choisi := True;
+	    --Par Nom
+	    when 'N'|'n' =>
+	       Get_Line(Reponse, Last);
+	       --On enlève eventurellement les espaces du debut
+	       Temp_Int_1 := Reponse'First;
+	       while Reponse(Temp_Int_1) = ' ' loop
+		  Temp_Int_1 := Temp_Int_1+1;
+	       end loop;
+	       Append(Message_TS, Reponse(Temp_Int_1..Last) & " : ");
+	       P_Epr := Trouver_Par_Nom(Reponse(Temp_Int_1..Last), Niveaux);
+	       Choisi := True;
+	    when 'Q'|'q' =>
+	       Choisi := True;
+	    when others => Put_Line("Inconnu");
+	 end case;
+	 if(P_Epr /= null and then Get_Accessible(P_Epr) = False) then
+	    P_Epr := null;
+	    Choisi := False;
+	    raise Niveau_Inaccessible;
+	 end if;
+	 --TRAITEMENT DES EXCEPTIONS (Communes a toutes les demandes)
+	 exception
+	    when Niveau_Inexistant => Append(Message_TS, "Les coordonnées saisies ne correspondent à rien !");
+	    when Niveau_Inaccessible => Append(Message_TS, "Ne sois pas si impatient ! (Niveau demandé inaccessible)");
+	    when Id_Inexistant => Append(Message_TS, "Le niveau demandé n'existait même pas !");
+	    when others => 
+	       Get_Line(Reponse, Last);
+	       Put_Line("Je sais pas pourquoi, mais ça me plait pas !");
+	 end;
+      end loop;
+      return P_Epr;
+   end Choix_Niveaux;
+   
 begin
-   Charger_Niveaux("test");
-   Affichage_Arbre(Niveaux, "   ");
-   New_Line;
-   Afficher_Ecran(L_Epr_To_Tab_Ecran(Niveaux), 2);
-   New_Line;
-   Put_Line("On rend la première épreuve accessible");
-   Set_Accessible(True, Niveaux.all.Info.all);
-   Afficher_Ecran(L_Epr_To_Tab_Ecran(Niveaux), 2);
-   Put_Line("On termine la première");
-   Epreuve_Finie(Niveaux.all.Info, Niveaux);
-   Afficher_Ecran(L_Epr_To_Tab_Ecran(Niveaux), 2);
+   null;
+   --Charger_Niveaux("test");
+   --Affichage_Arbre(Niveaux, "   ");
+   --New_Line;
+   --Afficher_Ecran(L_Epr_To_Tab_Ecran(Niveaux), 2);
+   --New_Line;
+   --Put_Line("On rend la première épreuve accessible");
+   --Set_Accessible(True, Niveaux.all.Info.all);
+   --Afficher_Ecran(L_Epr_To_Tab_Ecran(Niveaux), 2);
+   --Put_Line("On termine la première");
+   --Epreuve_Finie(Niveaux.all.Info, Niveaux);
+   --Afficher_Ecran(L_Epr_To_Tab_Ecran(Niveaux), 2);
 end Maps;

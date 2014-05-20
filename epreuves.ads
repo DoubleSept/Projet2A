@@ -30,6 +30,7 @@ package Epreuves is
    function GetPosition(E : in Pointeur_Epr) return Position;
    function Get_Id(E : in Pointeur_Epr) return Integer;
    function Get_Accessible(E : in Pointeur_Epr) return Boolean;
+   function Get_Nom(E : in Pointeur_Epr) return String;
    
    --Fonctions d'ajout
    procedure Ajouter_Predecesseurs(L : Pointeur_L_Epr; L2 : in out Pointeur_L2_Epr);

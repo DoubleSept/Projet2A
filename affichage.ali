@@ -5,12 +5,12 @@ A -gnatQ
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnn
 
-U affichage%b		affichage.adb		04209ae1 NE OO PK
+U affichage%b		affichage.adb		bd15f8c9 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W types%s		types.adb		types.ali
 
-U affichage%s		affichage.ads		be1b96cc EE NE OO PK
+U affichage%s		affichage.ads		52ab8ffa EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W types%s		types.adb		types.ali
@@ -24,11 +24,12 @@ D a-stream.ads		20090409150019 2ca4ee37
 D a-tags.ads		20101021101406 c7695348
 D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
-D affichage.ads		20140416182738 37ab513a
-D affichage.adb		20140514095024 ba3b0c2d
+D a-uncdea.ads		20070406091342 f15a5ed1
+D affichage.ads		20140520101513 c420d891
+D affichage.adb		20140520141057 efbe7733
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D system.ads		20120503154647 23e1f70b
+D system.ads		20130419124036 23e1f70b
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
@@ -45,29 +46,25 @@ D s-stratt.ads		20100909123135 aedef97e
 D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
-D types.ads		20140502150140 b1dd3222
+D types.ads		20140520150746 aee6a2bf
 X 1 ada.ads
-16K9*Ada 19e8 10|1r6 2r5 11|1r6 2r5
+16K9*Ada 19e8 11|1r6 2r5 12|1r6 2r5
 X 8 a-textio.ads
-49K13*Text_IO 472e16 10|1w10 2r9 11|1w10 2r9
-167U14*New_Line 11|13s10 27s10 35s10
-209U14*Put 11|11s13 19s13 22s13 25s13 33s13
-243U14*Put 11|7s7
-X 10 affichage.ads
-4K9*Affichage 6l5 6e14 11|4b14 39l5 39t14
-5U14*Afficher_Ecran 5>29 5>44 11|5b14 37l8 37t22
-5a29 T{31|8A9} 11|5b29 10r22 17r16 21r19 22r17 32r22
-5i44 Bord{integer} 11|5b44 9r19 10r38 18r22 24r22 31r19 32r38
-X 11 affichage.adb
-9i11 Y{integer}
-10i14 X{integer}
-17i11 Y{integer} 22r22
-18i14 X{integer}
-21i14 X{integer} 22r19
-24i14 X{integer}
-31i11 Y{integer}
-32i14 X{integer}
-X 31 types.ads
-1K9*Types 10|1w19 2r18 11|1w19 2r18 31|18e10
-8A9*Tab_Ecran(character)<integer><integer> 10|5r33 11|5r33
+49K13*Text_IO 472e16 11|1w10 2r9 12|1w10 2r9
+167U14*New_Line 12|14s7 31s10 40s7
+209U14*Put 12|25s81 26s30
+243U14*Put 12|7s7 9s7 11s13 13s7 18s10 21s42 22s42 23s42 24s60 30s10 35s7
+. 37s13 39s7
+X 11 affichage.ads
+4K9*Affichage 6l5 6e14 12|4b14 43l5 43t14
+5U14*Afficher_Ecran 5>29 12|5b14 41l8 41t22
+5a29 T{32|11A9} 12|5b29 10r19 17r16 19r19 20r18 26r34 36r19
+X 12 affichage.adb
+10i11 X{integer}
+17i11 Y{integer} 20r22 26r39
+19i14 X{integer} 20r20 26r36
+36i11 X{integer}
+X 32 types.ads
+3K9*Types 11|1w19 2r18 12|1w19 2r18 32|26e10
+11A9*Tab_Ecran(character)<integer><integer> 11|5r33 12|5r33
 

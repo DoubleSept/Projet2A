@@ -2,35 +2,96 @@ V "GNAT Lib v4.6"
 A -g
 A -gnatq
 A -gnatQ
-P ZX
-R nnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+P SS ZX
+R nnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnn
 
-U types%b		types.adb		4068700c NE OO PK
+U types%b		types.adb		2519465b NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W interfaces%s		interfac.ads		interfac.ali
 
-U types%s		types.ads		b1dd3222 EE NE OO PK
+U types%s		types.ads		5fbcfc6e EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_deallocation%s
 
-D system.ads		20120503154647 23e1f70b
-D types.ads		20140502150140 b1dd3222
-D types.adb		20140502150402 f1b5422e
-X 2 types.ads
-1K9*Types 18l5 18e10 3|1b14 23l5 23t10
-2i4*LARGEUR_ECRAN{integer} 8r31
-3i4*HAUTEUR_ECRAN{integer} 8r49
-4i4*EPAISSEUR_BORDURE{integer}
-5i4*HAUTEUR_BORDURE{integer}
-7A9*Tableau_Int(integer)<integer><integer>
-8A9*Tab_Ecran(character)<integer><integer> 16r26 16r44 3|8r27 8r45 9r16
-10R9*Position 13e14 15r27 3|3r27
-11i7*X{natural} 3|5r17 5r24
-12i7*Y{natural} 3|5r33 5r40
-15V13*"="{boolean} 15>17 15>22 3|3b13 6l8 6t11
-15r17 P1{10R9} 3|3b17 5r14 5r30
-15r22 P2{10R9} 3|3b22 5r21 5r37
-16V13*"+"{8A9} 16>17 16>21 3|8b13 21l8 21t11
-16a17 T1{8A9} 3|8b17 11r16 12r19 13r17 16r31
-16a21 T2{8A9} 3|8b22 14r31
-X 3 types.adb
-9a7 Renvoi{2|8A9} 14m16 16m16 20r14
-11i11 Y{integer} 13r22 14r25 14r36 16r25 16r36
-12i14 X{integer} 13r20 14r23 14r34 16r23 16r34
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D system.ads		20130419124036 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+D types.ads		20140520150746 aee6a2bf
+D types.adb		20140520132757 7db46d40
+X 1 ada.ads
+16K9*Ada 19e8 32|1r6 13r29 33|1r6 2r5
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 33|1w10 2r9
+X 12 a-uncdea.ads
+20u15*Unchecked_Deallocation 32|1w10 13r33
+X 32 types.ads
+3K9*Types 26l5 26e10 33|4b14 62l5 62t10
+4i4*LARGEUR_ECRAN{integer} 11r31 24r110 33|33r30 51r110
+5i4*HAUTEUR_ECRAN{integer} 11r49 33|33r54
+6i4*EPAISSEUR_BORDURE{integer}
+7i4*HAUTEUR_BORDURE{integer}
+8i4*LONGUEUR_MAX_NOM{integer}
+10A9*Tableau_Int(integer)<integer><integer>
+11A9*Tab_Ecran(character)<integer><integer> 21r26 21r44 22r61 23r52 24r54
+. 33|11r27 11r45 12r16 26r61 40r52 51r54
+12P9*P_String(string) 13r64
+13U14*FreeStr[12|20]
+15R9*Position 18e14 20r27 22r28 33|6r27 26r28 27r21
+16i7*X{natural} 33|8r17 8r24 29r15 30m22 30r32 33r25 36r24
+17i7*Y{natural} 33|8r33 8r40 33r52 36r34
+20V13*"="{boolean} 20>17 20>22 33|6b13 9l8 9t11
+20r17 P1{15R9} 33|6b17 8r14 8r30
+20r22 P2{15R9} 33|6b22 8r21 8r37
+21V13*"+"{11A9} 21>17 21>21 33|11b13 24l8 24t11
+21a17 T1{11A9} 33|11b17 14r16 15r19 16r17 19r31
+21a21 T2{11A9} 33|11b22 17r31
+22U14*Ecrire 22>21 22>38 22=50 33|26b14 38l8 38t14
+22r21 PDeb{15R9} 33|26b21 29r10 30r27 33r47 36r29
+22s38 S{string} 33|26b38 32r16 36r38
+22a50 T{11A9} 33|26b50 36m10
+23U14*TraitVertical 23>28 23=41 33|40b14 49l8 49t21
+23i28 X{integer} 33|40b28 43r16 43r48 44r15 46r15
+23a41 T{11A9} 33|40b41 42r16 43r14 43r46 44m13 46m13
+24U14*TraitHorizontal 24>30 24=43 24>65 24>89 33|51b14 60l8 60t23
+24i30 Y{integer} 33|51b30 54r19 54r51 55r18 57r18
+24a43 T{11A9} 33|51b43 54r14 54r46 55m13 57m13
+24i65 XDeb{integer} 33|51b65 53r16
+24i89 XFin{integer} 33|51b89 53r22
+X 33 types.adb
+12a7 Renvoi{32|11A9} 17m16 19m16 23r14
+14i11 Y{integer} 16r22 17r25 17r36 19r25 19r36
+15i14 X{integer} 16r20 17r23 17r34 19r23 19r34
+27r7 PDebCorrige{32|15R9} 30m10 33r13 36r12
+32i11 N{integer} 33r27 36r26 36r40
+42i11 Y{integer} 43r19 43r51 44r18 46r18
+53i11 X{integer} 54r16 54r48 55r15 57r15
 

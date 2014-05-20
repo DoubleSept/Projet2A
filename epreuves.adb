@@ -57,6 +57,11 @@ package body Epreuves is
       return E.all.Caracs.Accessible;
    end Get_Accessible;
    
+   function Get_Nom(E : Pointeur_Epr) return String is
+   begin
+      return To_String(E.all.Caracs.Nom);
+   end Get_Nom;
+   
    ---------------------
    --Fonctions d'ajout
    procedure Ajouter_Predecesseurs(L : Pointeur_L_Epr; L2 : in out Pointeur_L2_Epr) is
@@ -125,7 +130,7 @@ package body Epreuves is
    begin
       Temp_L := L;
       while Temp_L /= null loop
-	 if( Ada.Strings.Fixed.Translate(To_String(Temp_L.all.Info.all.Caracs.Nom), Ada.Strings.Maps.Constants.Lower_Case_Map) = Name) then
+	 if( Ada.Strings.Fixed.Translate(To_String(Temp_L.all.Info.all.Caracs.Nom), Ada.Strings.Maps.Constants.Lower_Case_Map) = Temp_Name) then
 	    return Temp_L.all.Info;
 	 else
 	    Temp_L := Temp_L.all.Suiv;

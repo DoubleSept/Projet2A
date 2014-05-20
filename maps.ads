@@ -9,10 +9,11 @@ package Maps is
    
    procedure Charger_Niveaux(Path : String);
    
-   function Get_Niveau(Pos : Position) return Integer;
-   function Get_Niveau(Nom : String) return Integer;
+   function Get_Niveau(Pos : Position) return Pointeur_Epr;
    
    procedure Finir_Niveau(Id : Integer);
+   procedure Finir_Niveau(P_Epr : Pointeur_Epr);
    
-   procedure Afficher_Carte(Largeur_Trait : Integer);
+   procedure Afficher_Carte;
+   function Choix_Niveaux return Pointeur_Epr;
 end Maps;
